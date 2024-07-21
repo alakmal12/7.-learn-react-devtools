@@ -1,0 +1,149 @@
+Maximilian: Sekarang yang terakhir di bagian ini,
+
+saya ingin memperkenalkan Anda pada ekstensi tambahan yang
+
+dapat Anda instal ke dalam browser Anda untuk membuat
+
+hidup Anda sebagai pengembang React menjadi lebih mudah.
+
+Dan ekstensi tersebut dapat ditemukan
+
+jika Anda mencari React devtools.
+
+Karena ekstensi React Developer Tools inilah yang ingin saya
+
+perkenalkan kepada Anda.
+
+Sekarang, jika Anda belum memiliki
+
+ekstensi tersebut, Anda akan menemukan tombol instal di sini, tepat
+
+di halaman ini, yang akan menambahkannya
+
+ke peramban Anda, ke peramban Chrome di sini.
+
+Dan dengan ekstensi yang ditambahkan,
+
+jika Anda membuka alat pengembang
+
+Anda di tab non-pribadi, Anda akan menemukan dua tab baru, dua halaman baru
+
+yang bisa Anda kunjungi di alat pengembang browser Anda.
+
+Sekarang kita akan melihat halaman profiler ini di sini
+
+sedikit di akhir kursus, karena
+
+fitur React Developer Tools ini terutama tentang menemukan
+
+dan memperbaiki masalah performa pada aplikasi React
+
+Anda, dan oleh karena itu kita akan melihat lebih dekat
+
+pada tab ini di akhir kursus saat
+
+kita, secara umum, melihat lebih
+
+dekat pada performa React dan cara meningkatkan
+
+dan mengoptimalkannya.
+
+Untuk saat ini, tab komponen
+
+inilah yang menarik bagi kami.
+
+Pada tab ini, Anda menemukan pohon komponen aplikasi Anda.
+
+Jadi komponen aplikasi dengan header, input pengguna,
+
+dan komponen hasil sebagai anak.
+
+Dan jika Anda mengarahkan kursor ke salah satu komponen
+
+ini, komponen ini juga disorot di sebelah kiri.
+
+Jadi, Anda dapat dengan cepat melihat bagian mana dari UI yang dikontrol
+
+dan dirender oleh komponen yang mana, yang
+
+bisa sangat berguna untuk menganalisis dan memahami
+
+pohon komponen yang lebih kompleks, dan antarmuka pengguna
+
+yang lebih kompleks.
+
+Jika Anda mengeklik ikon roda gigi
+
+di sini, Anda juga dapat mengontrol tampilan
+
+alat pengembang.
+
+Contohnya, mode warna, densitas tampilan, dan kemudian
+
+juga untuk pohon komponen ini, juga
+
+jika pohon komponen harus diperluas secara default,
+
+dan beberapa hal lainnya.
+
+Cukup bermain-main dengan pengaturan ini
+
+untuk merasakan apa yang mereka lakukan.
+
+Tetapi jika Anda sekarang mengklik salah satu komponen tersebut,
+
+Anda juga akan mempelajari lebih lanjut tentang komponen tersebut.
+
+Sebagai contoh, Anda juga dapat melihat props mana yang diterima oleh sebuah
+
+komponen, dan jenis nilai props yang Anda dapatkan di sana.
+
+Misalnya, bahwa komponen input pengguna
+
+menerima prop perubahan aktif,
+
+yang merupakan sebuah fungsi, yaitu fungsi perubahan pegangan.
+
+Sedangkan input pengguna di sisi
+
+lain adalah objek dengan properti berikut ini.
+
+Dan Anda bahkan dapat mengedit properti tersebut dan
+
+melihat perubahan itu tercermin dalam UI, seandainya
+
+Anda ingin bermain-main dengan nilai tersebut, dan melihat
+
+bagaimana nilai yang berbeda menghasilkan
+
+hasil yang berbeda.
+
+-: Jika komponen mengelola state, seperti komponen aplikasi,
+
+Anda juga akan melihatnya di sini di bawah kait.
+
+Di sana, Anda dapat melihat bahwa komponen
+
+aplikasi dalam aplikasi ini menggunakan hook use state
+
+untuk membuat satu state, satu nilai state, dan Anda juga dapat mengedit
+
+nilai state tersebut di sini.
+
+Contohnya, saya bisa mengubah durasi menjadi 12 di sini,
+
+dan melihat bagaimana hal itu tercermin dalam UI.
+
+Dan oleh karena itu, tab komponen di sini
+
+di devtools React adalah tempat yang tepat untuk memahami
+
+dengan cepat bagaimana tampilan pohon komponen Anda, bagian mana dari
+
+UI yang dikontrol oleh komponen yang mana, dan Anda juga dapat menggunakannya
+
+untuk mengedit pohon komponen Anda, dan dengan cepat merasakan
+
+bagaimana perubahan pada props atau state dapat direfleksikan
+
+pada UI.

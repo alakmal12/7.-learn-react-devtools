@@ -1,0 +1,225 @@
+Maximilian: Nah selain pesan kesalahan, pemikiran
+
+logis dan alat pengembang browser, ada juga alat lain, bisa dibilang,
+
+fitur React lain yang dapat membantu Anda menangkap dan memperbaiki
+
+beberapa jenis kesalahan.
+
+Dan untuk mendemonstrasikan fitur ini,
+
+saya menyunting Hasil. jsx dan saya memindahkan array
+
+hasil ini di sini dari fungsi komponen tepat di bawah
+
+pernyataan impor, dan terlampir Anda menemukan Hasil
+
+yang diperbarui. jsx yang berisi perubahan
+
+ini.
+
+Sekarang, saya melakukan ini karena suatu alasan, karena
+
+dengan itu, jika Anda memuat ulang, semuanya tampak berfungsi.
+
+Namun ketika Anda melakukan
+
+perubahan di sini, Anda akan melihat bahwa ada sesuatu
+
+yang tidak beres karena sekarang tabelnya menjadi semakin panjang
+
+dan kami juga memiliki pesan kesalahan
+
+di konsol browser, beberapa kesalahan jika Anda
+
+melihatnya, dan semua kesalahan ini adalah tentang
+
+dua anak yang memiliki kunci yang sama.
+
+Jadi, mereka tampaknya terkait dengan daftar
+
+kita di sini, karena dalam daftar itulah kita mengeluarkan elemen yang memiliki
+
+penyangga utama.
+
+Dan tentu saja cukup jelas di sini bahwa
+
+masalahnya adalah bahwa daftar ini terus
+
+bertambah panjang dan semakin panjang, alih-alih dihapus
+
+dan diganti saat kita mengedit input tersebut.
+
+Sekarang, kita dapat kembali menggunakan debugger atau melihat lebih dekat
+
+kode kita untuk mencari tahu apa yang salah di sini.
+
+Tetapi sebelum kita melakukan itu, perlu dicatat
+
+bahwa kita hanya melihat masalah ini segera setelah
+
+kita mulai mengedit beberapa nilai di sini,
+
+yang mungkin bisa dibilang adalah sesuatu yang akan kita lakukan ketika menguji
+
+aplikasi ini.
+
+Namun demikian, ini bukan kesalahan yang langsung kami lihat.
+
+Dan setidaknya ini adalah kesalahan yang bisa langsung ditampilkan
+
+oleh React saat aplikasi dijalankan.
+
+Hal ini dapat dilakukan jika kita menggunakan StrictMode
+
+dan oleh karena itu kita akan menggunakan StrictMode
+
+sebelum saya menjelaskan apa yang menyebabkan kesalahan ini.
+
+Penggunaan StrictMode biasanya dimulai di Index. jsx meskipun Anda juga dapat
+
+mengaktifkannya hanya untuk beberapa bagian dari
+
+aplikasi Anda jika Anda menginginkannya, karena StrictMode, pada akhirnya
+
+hanyalah sebuah komponen yang Anda impor dari React, sebuah komponen
+
+bawaan yang disebut StrictMode.
+
+Jadi StrictMode adalah sebuah komponen yang disediakan oleh React dan oleh
+
+karena itu Anda menggunakannya seperti sebuah komponen.
+
+Tepatnya, ini adalah komponen yang dimaksudkan untuk dibungkus
+
+dengan komponen lainnya.
+
+Sebagai contoh, di sini di sekitar komponen App,
+
+kita dapat membungkus komponen App dengan tag pembuka
+
+dan penutup komponen StrictMode.
+
+Dan itulah yang saya maksudkan ketika saya mengatakan bahwa Anda dapat
+
+menggunakannya di mana saja dalam aplikasi Anda.
+
+Anda tidak perlu membungkus komponen root.
+
+Sebagai gantinya, kita juga dapat
+
+mengimpor dan menggunakan komponen StrictMode di tempat
+
+yang lebih dalam, bersarang di dalam pohon
+
+komponen kita dan misalnya hanya membungkus komponen Results
+
+atau komponen UserInput atau apa pun yang kita inginkan.
+
+Namun, tidak jarang kita membungkus komponen Aplikasi root dengan
+
+StrictMode karena StrictMode melakukan beberapa hal di belakang layar
+
+yang dapat membantu kita menangkap masalah tertentu dalam aplikasi
+
+kita.
+
+Sebagai contoh, salah satu hal terpenting yang
+
+dilakukan oleh komponen StrictMode
+
+adalah komponen ini akan mengeksekusi setiap fungsi komponen
+
+dua kali, bukan hanya satu kali.
+
+Sekarang, ini hanya dilakukan selama pengembangan.
+
+Jadi, jika Anda menyiapkan aplikasi Anda untuk produksi
+
+dan Anda akan mengunggahnya ke server, StrictMode
+
+tidak akan lagi mengeksekusi setiap komponen dua kali karena hal ini tentu
+
+saja akan sedikit memengaruhi kinerja aplikasi Anda.
+
+Tetapi hal itu terjadi selama pengembangan
+
+karena ketika setiap komponen dieksekusi dua kali, ini membantu
+
+Anda menangkap kesalahan seperti ini karena sekarang jika saya memuat ulang, karena
+
+setiap komponen dieksekusi dua kali termasuk
+
+komponen App, saya mulai dengan dua kali tabel
+
+di sini karena sepertinya saya memiliki beberapa kesalahan dalam kode saya
+
+yang menyebabkan tabel ini bertambah dan bertambah.
+
+Jadi, tentu saja, hal itu tidak memperbaiki
+
+masalah, dan juga belum tentu memberi tahu
+
+saya, apa yang menyebabkan masalah
+
+ini, tetapi langsung muncul ke permukaan bahwa ada masalah.
+
+Saya bahkan tidak perlu menyunting masukan untuk
+
+mengetahui bahwa ada sesuatu yang salah.
+
+Namun, berkat StrictMode yang diaktifkan dan
+
+melingkupi seluruh aplikasi saya,
+
+kesalahan ini bisa langsung terlihat.
+
+Dan kesalahan di sini berasal dari fakta bahwa
+
+dalam komponen Hasil saya, saya membuat
+
+array Hasil ini di luar fungsi komponen
+
+dan oleh karena itu hanya sekali karena fungsi komponen
+
+ini akan dieksekusi ulang oleh React
+
+setiap kali state pada komponen yang terlihat berubah,
+
+jadi setiap kali UserInput
+
+berubah dalam kasus ini, kode lain di dalam
+
+berkas ini, sehingga pembuatan
+
+array ini tidak akan dieksekusi ulang, yang hanya dieksekusi
+
+satu kali.
+
+Dan oleh karena itu, apa yang terjadi
+
+di sini adalah sebuah larik dibuat dan kemudian di dalam fungsi
+
+calculateInvestmentResults, semakin banyak
+
+item ditambahkan ke satu larik yang sama di dalam
+
+memori karena larik tersebut tidak pernah di-reset
+
+atau semacamnya.
+
+Itulah mengapa kita harus mengambil kode ini dan memindahkannya
+
+kembali ke dalam fungsi komponen sehingga sebuah array baru dibuat ulang setiap
+
+kali fungsi komponen ini dijalankan.
+
+Dan dengan itu, kita dapat melihat bahwa jika kita memuat
+
+ulang aplikasi ini, kesalahan ini akan hilang dan tidak ada kesalahan di konsol.
+
+Dan sekarang kita juga dapat mengetahui dengan yakin
+
+bahwa ini juga tidak akan berubah jika kita mulai mengedit nilai-nilai ini karena
+
+kita menggunakan StrictMode.
